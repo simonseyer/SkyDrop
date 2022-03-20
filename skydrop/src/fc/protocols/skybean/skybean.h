@@ -22,7 +22,6 @@ extern Stream skybean_stream;
 #define SKYBEAN_TELEMETRY	0x01
 #define SKYBEAN_CONFIG		0x02
 #define SKYBEAN_FILE		0x03
-#define SKYBEAN_SPECIAL		0xFF
 
 void protocol_skybean_init();
 void protocol_skybean_step();

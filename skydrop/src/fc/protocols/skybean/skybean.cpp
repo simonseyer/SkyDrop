@@ -5,7 +5,6 @@
 
 #include "info.h"
 #include "file.h"
-#include "special.h"
 
 Stream skybean_stream;
 
@@ -42,10 +41,6 @@ void protocol_skybean_packet()
 
 		case(SKYBEAN_FILE): //file operatios
 			skybean_file(op_lo);
-		break;
-
-		case(SKYBEAN_SPECIAL): //special
-			skybean_special(op_lo);
 		break;
 
 		default:

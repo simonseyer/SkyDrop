@@ -10,12 +10,15 @@ set(SRC_FILES ${SRC_FILES}
     "${SRC_PATH}/xlib/common.c"
     "${SRC_PATH}/xlib/ring_small.cpp"
     "${SRC_PATH}/xlib/ring.cpp"
+    "${SRC_PATH}/xlib/stream.cpp"
 )
 
 # add fc
 file(GLOB SRC_FILES_TMP "${SRC_PATH}/fc/*.c*")
 set(SRC_FILES ${SRC_FILES} ${SRC_FILES_TMP})
 file(GLOB SRC_FILES_TMP "${SRC_PATH}/fc/protocols/*.c*")
+set(SRC_FILES ${SRC_FILES} ${SRC_FILES_TMP})
+file(GLOB SRC_FILES_TMP "${SRC_PATH}/fc/protocols/skybean/*.c*")
 set(SRC_FILES ${SRC_FILES} ${SRC_FILES_TMP})
 
 set(SRC_FILES ${SRC_FILES}

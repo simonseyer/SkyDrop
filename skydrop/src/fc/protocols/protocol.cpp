@@ -4,7 +4,7 @@
 #include "LK8EX1.h"
 #include "bluefly.h"
 
-//#include "skybean/skybean.h"
+#include "skybean/skybean.h"
 
 #include "generic.h"
 
@@ -50,7 +50,7 @@ void protocol_tx_flush()
 
 void protocol_init()
 {
-//	protocol_skybean_init();
+	protocol_skybean_init();
 	protocol_generic_init();
 }
 
@@ -78,9 +78,9 @@ void protocol_step()
 			protocol_bluefly_step();
 		break;
 
-//		case(PROTOCOL_SKYBEAN):
-//			protocol_skybean_step();
-//		break;
+		case(PROTOCOL_SKYBEAN):
+			protocol_skybean_step();
+		break;
 	}
 }
 
@@ -88,9 +88,9 @@ void protocol_rx(char c)
 {
 	switch (config.connectivity.protocol)
 	{
-//		case(PROTOCOL_SKYBEAN):
-//			protocol_skybean_rx(c);
-//		break;
+		case(PROTOCOL_SKYBEAN):
+			protocol_skybean_rx(c);
+		break;
 
 		default:
 			protocol_generic_rx(c);
